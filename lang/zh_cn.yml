@@ -18,8 +18,8 @@ mirror_sync_reforged:
     aborted: §c同步§r被终止！
 
     countdown:
-      intro: '{0}秒后关闭服务器§c同步§r，§c点击取消§r'
-      text: 距离同步还有{0}秒
+      intro: '{0}秒后关闭服务器§c同步§r'
+      text: 距离同步还有{0}秒，§c点击取消§r
       hover: 点击终止§c同步§r！
 
     path_checking:

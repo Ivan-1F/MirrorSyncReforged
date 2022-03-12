@@ -1,0 +1,27 @@
+mirror_sync_reforged:
+  help_message: |
+    ------ {name} v{version} ------
+    A plugin used to sync survival server worlds to the mirror server
+    §7{prefix}§r Display help message
+    §7{prefix} sync§r Sync worlds
+    §7{prefix} confirm§r Use after execute back to confirm §csync§r execution
+    §7{prefix} abort§r Abort §csyncing§r at anytime
+    §7{prefix} reload§r Reload config file
+
+  sync:
+    echo_action: Gonna §csync§r worlds
+    confirm_hint: Use §7{0} confirm§r to confirm §csync§r
+    confirm_hover: Click to confirm
+    abort_hint: §7{0} abort§r to abort
+    abort_hover: Click to abort
+    abort: Aborting §csync§r
+    aborted: §cSync§r aborted!
+
+    countdown:
+      intro: §cSync§r the worlds after {0} seconds
+      text: '{0} second later the world will be §csynced§r, §cclick here to abort§r'
+      hover: Click here to abort §csync§r！
+
+    path_checking:
+      not_exist: '§cPath checking failed: {0} is not existed'
+      not_a_dir: '§cPath checking failed: {0} is not a directory'
