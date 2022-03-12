@@ -25,3 +25,6 @@ mirror_sync_reforged:
     path_checking:
       not_exist: '§cPath checking failed: {0} is not existed'
       not_a_dir: '§cPath checking failed: {0} is not a directory'
+
+  confirm_sync:
+    nothing_to_confirm: Nothing to confirm

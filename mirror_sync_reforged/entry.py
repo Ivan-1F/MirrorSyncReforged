@@ -14,6 +14,7 @@ metadata: Metadata
 config: Configure
 
 abort_sync = False
+sync_requested = False
 
 
 def tr(key: str, *args, **kwargs):
@@ -108,10 +109,13 @@ def check_paths(source: CommandSource) -> bool:
 
 
 def sync(source: CommandSource):
-    global abort_sync
-    abort_sync = False
     if not check_paths(source):
         return
+
+    global abort_sync, sync_requested
+    abort_sync = False
+    sync_requested = True
+
     source.get_server().say(tr('sync.echo_action'))
     source.get_server().say(
         command_run(tr('sync.confirm_hint', PREFIX), tr('sync.confirm_hover'),
@@ -152,12 +156,18 @@ def _sync(source: CommandSource):
 
 
 def confirm(source: CommandSource):
-    _sync(source)
+    global sync_requested
+    if not sync_requested:
+        source.get_server().say(tr('confirm_sync.nothing_to_confirm'))
+    else:
+        _sync(source)
+        sync_requested = False
 
 
 def abort(source: CommandSource):
-    global abort_sync
+    global abort_sync, sync_requested
     abort_sync = True
+    sync_requested = False
     source.get_server().say(tr('sync.abort'))
 
 

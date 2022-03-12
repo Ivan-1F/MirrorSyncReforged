@@ -25,3 +25,6 @@ mirror_sync_reforged:
     path_checking:
       not_exist: §c路径检查失败：{0}不存在
       not_a_dir: §c路径检查失败：{0}不是一个目录
+
+  confirm_sync:
+    nothing_to_confirm: 没有什么需要确认的
