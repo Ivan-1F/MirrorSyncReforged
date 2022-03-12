@@ -1,4 +1,4 @@
-MCDReforged Plugin Template
+MirrorSyncReforged
 -----
 
 A template for MCDReforged (>=2.x) plugin

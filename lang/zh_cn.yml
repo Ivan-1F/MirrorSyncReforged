@@ -1,0 +1,27 @@
+mirror_sync_reforged:
+  help_message: |
+    ------ {name} v{version} ------
+    一个用于同步生存服存档至镜像服的插件
+    §7{prefix}§r 显示帮助信息
+    §7{prefix} sync§r 同步存档
+    §7{prefix} confirm§r 再次确认是否进行§c同步§r
+    §7{prefix} abort§r 在任何时候键入此指令可中断§c同步§r
+    §7{prefix} reload§r 重新加载配置文件
+
+  sync:
+    echo_action: 准备§c同步§r存档
+    confirm_hint: 使用§7{0} confirm§r 确认§c同步§r
+    confirm_hover: 点击确认
+    abort_hint: §7{0} abort§r 取消
+    abort_hover: 点击取消
+    abort: 终止§c同步§r
+    aborted: §c同步§r被终止！
+
+    countdown:
+      intro: '{0}秒后关闭服务器§c同步§r，§c点击取消§r'
+      text: 距离同步还有{0}秒
+      hover: 点击终止§c同步§r！
+
+    path_checking:
+      not_exist: §c路径检查失败：{0}不存在
+      not_a_dir: §c路径检查失败：{0}不是一个目录
