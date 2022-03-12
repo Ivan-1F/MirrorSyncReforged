@@ -5,6 +5,8 @@ Sync survival server world to the mirror server
 
 Reforged from [MirrorSync](https://github.com/Ivan-1F/MCDReforged-Plugins/tree/master/MirrorSync)
 
+Remember to put it in the mirror server
+
 ## Configure
 
 Configure file: `config/mirror_sync_reforged/config.json`
@@ -42,6 +44,33 @@ For Spigot servers: `['world', 'world_nether', 'world_the_end']`
 Default value: `10`
 
 The countdown after executing "!!mirror confirm"
+
+### Example
+
+File structure:
+
+```
+root/
+    survival_mcdr/
+        plugins/
+        server/
+            world/
+            minecraft_server.jar
+        ...
+    mirror_mcdr/
+        config/
+            mirror_sync_reforged/
+                config.json
+        plugins/
+            mirror_sync_reforged.mcdr
+        server/
+            world/
+            minecraft_server.jar
+        ...
+    ...
+```
+
+then `survival_server_path` should be `../survival_mcdr/server` and `mirror_server_path` should be `./server`
 
 ## Commands
 
