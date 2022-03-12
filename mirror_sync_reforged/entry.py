@@ -175,15 +175,15 @@ def register_command(server: PluginServerInterface):
     def get_literal_node(literal):
         return (
             Literal(literal)
-                .requires(lambda src: src.has_permission(config.permission_level), lambda: tr('permission_denied'))
+            .requires(lambda src: src.has_permission(config.permission_level), lambda: tr('permission_denied'))
         )
 
     server.register_command(
         Literal(PREFIX)
-            .runs(show_help_message)
-            .then(get_literal_node('sync').runs(sync))
-            .then(get_literal_node('confirm').runs(confirm))
-            .then(get_literal_node('abort').runs(abort))
+        .runs(show_help_message)
+        .then(get_literal_node('sync').runs(sync))
+        .then(get_literal_node('confirm').runs(confirm))
+        .then(get_literal_node('abort').runs(abort))
     )
 
 
