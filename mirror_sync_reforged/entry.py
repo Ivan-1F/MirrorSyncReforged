@@ -171,6 +171,11 @@ def abort(source: CommandSource):
     source.get_server().say(tr('sync.abort'))
 
 
+def reload(source: CommandSource):
+    load_config()
+    source.get_server().say(tr('config.reloaded'))
+
+
 def register_command(server: PluginServerInterface):
     def get_literal_node(literal):
         return (
@@ -184,6 +189,7 @@ def register_command(server: PluginServerInterface):
         .then(get_literal_node('sync').runs(sync))
         .then(get_literal_node('confirm').runs(confirm))
         .then(get_literal_node('abort').runs(abort))
+        .then(get_literal_node('reload').runs(abort))
     )
 
 

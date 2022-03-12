@@ -28,3 +28,6 @@ mirror_sync_reforged:
 
   confirm_sync:
     nothing_to_confirm: Nothing to confirm
+
+  config:
+    reloaded: Configure reloaded

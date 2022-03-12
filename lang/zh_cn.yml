@@ -28,3 +28,6 @@ mirror_sync_reforged:
 
   confirm_sync:
     nothing_to_confirm: 没有什么需要确认的
+
+  config:
+    reloaded: 配置文件已重载
