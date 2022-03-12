@@ -15,8 +15,6 @@ Default value: `4`
 
 The minimum permission level to use the command
 
-## TODO: !!mirror reload
-
 ### `survival_server_path`
 
 Default value: `../survival/server`
