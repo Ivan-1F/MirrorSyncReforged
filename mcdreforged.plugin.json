@@ -2,12 +2,16 @@
     "id": "mirror_sync_reforged",
     "version": "1.0.0",
     "name": "Mirror Sync Reforged",
-    "description": "Sync survival server world to the mirror server",
+    "description": {
+        "en_us": "Sync survival server world to the mirror server",
+        "zh_cn": "一个用于同步生存服存档至镜像服的插件"
+    },
     "author": [
         "Ivan1F"
     ],
     "link": "https://github.com/Ivan-1F/MirrorSyncReforged",
     "dependencies": {
+        "mcdreforged": ">=2.0.0"
     },
     "entrypoint": "mirror_sync_reforged.entry",
     "resources": [
