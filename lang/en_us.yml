@@ -27,7 +27,7 @@ mirror_sync_reforged:
       not_a_dir: '§cPath checking failed: {0} is not a directory'
 
     backup:
-      comment: {0} backup before sync
+      comment: '{0} backup before sync'
 
   confirm_sync:
     nothing_to_confirm: Nothing to confirm
