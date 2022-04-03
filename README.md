@@ -45,6 +45,14 @@ Default value: `10`
 
 The countdown after executing "!!mirror confirm"
 
+### `backup`
+
+Default value: `false`
+
+If enabled, [QuickBackupM](https://github.com/TISUnion/QuickBackupM) is required
+
+A backup of the mirror server will be created before syncing the world
+
 ### Example
 
 File structure:

@@ -9,3 +9,4 @@ class Configure(Serializable):
     mirror_server_path: str = './server'
     world_names: List[str] = ['world']
     count_down: int = 10
+    backup: bool = False

@@ -5,6 +5,7 @@ from typing import Any
 
 from mcdreforged.api.all import *
 
+from mirror_sync_reforged import constants
 from mirror_sync_reforged.config import Configure
 
 PREFIX = '!!mirror'
@@ -128,9 +129,10 @@ def sync(source: CommandSource):
 
 @new_thread('MSR')
 def _sync(source: CommandSource):
-    source.get_server().say(tr('sync.countdown.intro', config.count_down))
+    server = source.get_server()
+    server.say(tr('sync.countdown.intro', config.count_down))
     for countdown in range(1, config.count_down):
-        source.get_server().say(command_run(
+        server.say(command_run(
             tr('sync.countdown.text', config.count_down - countdown),
             tr('sync.countdown.hover'),
             '{} abort'.format(PREFIX)
@@ -139,12 +141,22 @@ def _sync(source: CommandSource):
             time.sleep(0.1)
             global abort_sync
             if abort_sync:
-                source.get_server().say(tr('sync.aborted'))
+                server.say(tr('sync.aborted'))
                 return
 
-    source.get_server().stop()
+    server.stop()
     server_inst.logger.info('Wait for server to stop')
-    source.get_server().wait_for_start()
+    server.wait_for_start()
+
+    if config.backup:
+        if constants.QBM_PID in server.get_plugin_list():
+            server_inst.logger.info('Backup current world to avoid idiot')
+            server.dispatch_event(constants.TRIGGER_BACKUP_EVENT, (
+                server.get_plugin_command_source(),
+                tr('sync.backup.comment', metadata.name)
+            ), on_executor_thread=False)
+        else:
+            server_inst.logger.warning('Backup is enabled but {} is not loaded'.format(constants.QBM_PID))
 
     server_inst.logger.info('Deleting world')
     remove_worlds(config.mirror_server_path)
@@ -152,7 +164,7 @@ def _sync(source: CommandSource):
     server_inst.logger.info('Copying survival worlds to the mirror server')
     copy_worlds(config.survival_server_path, config.mirror_server_path)
     server_inst.logger.info('Sync done, starting the server')
-    source.get_server().start()
+    server.start()
 
 
 def confirm(source: CommandSource):
