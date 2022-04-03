@@ -31,7 +31,7 @@ def show_help_message(source: CommandSource):
     pass
 
 
-# From Quick Back Multi
+# From Quick Backup Multi
 def copy_worlds(src: str, dst: str):
     for world in config.world_names:
         src_path = os.path.join(src, world)
@@ -61,7 +61,7 @@ def copy_worlds(src: str, dst: str):
                 '{} does not exist while copying ({} -> {})'.format(src_path, src_path, dst_path))
 
 
-# From Quick Back Multi
+# From Quick Backup Multi
 def remove_worlds(folder: str):
     for world in config.world_names:
         target_path = os.path.join(folder, world)
