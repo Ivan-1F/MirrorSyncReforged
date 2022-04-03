@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "name": "Mirror Sync Reforged",
     "description": {
-        "en_us": "Sync survival server world to the mirror server",
+        "en_us": "A plugin to sync survival server world to the mirror server",
         "zh_cn": "一个用于同步生存服存档至镜像服的插件"
     },
     "author": [

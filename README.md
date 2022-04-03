@@ -1,7 +1,9 @@
 MirrorSyncReforged
 -----
 
-Sync survival server world to the mirror server
+**English** | [中文](./README_cn.md)
+
+A plugin to sync survival server world to the mirror server
 
 Reforged from [MirrorSync](https://github.com/Ivan-1F/MCDReforged-Plugins/tree/master/MirrorSync)
 
@@ -27,7 +29,7 @@ The path to the survival server (source)
 
 Default value: `./server`
 
-The path to the survival server (destination)
+The path to the mirror server (destination)
 
 ### `world_names`
 
@@ -43,7 +45,7 @@ For Spigot servers: `['world', 'world_nether', 'world_the_end']`
 
 Default value: `10`
 
-The countdown after executing "!!mirror confirm"
+The countdown after executing `!!mirror confirm`
 
 ### `backup`
 
@@ -51,7 +53,7 @@ Default value: `false`
 
 If enabled, [QuickBackupM](https://github.com/TISUnion/QuickBackupM) is required
 
-A backup of the mirror server will be created before syncing the world
+A backup of the mirror server will be created by [QuickBackupM](https://github.com/TISUnion/QuickBackupM) before syncing the world
 
 ### Example
 
@@ -86,7 +88,7 @@ then `survival_server_path` should be `../survival_mcdr/server` and `mirror_serv
 
 `!!mirror sync`: Sync worlds
 
-`!!mirror confirm`: Use after execute back to confirm §csync§r execution
+`!!mirror confirm`: Use after execute back to confirm sync execution
 
 `!!mirror abort`: Abort syncing at anytime
 
