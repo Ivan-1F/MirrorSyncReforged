@@ -9,6 +9,7 @@ mirror_sync_reforged:
     §7{prefix} reload§r 重新加载配置文件
 
   help_summary: 同步生存服存档至镜像服
+  permission_denied: 权限不足
 
   sync:
     echo_action: 准备§c同步§r存档

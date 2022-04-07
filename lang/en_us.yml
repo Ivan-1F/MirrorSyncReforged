@@ -9,6 +9,7 @@ mirror_sync_reforged:
     §7{prefix} reload§r Reload config file
 
   help_summary: Sync survival server worlds to the mirror server
+  permission_denied: Permission denined
 
   sync:
     echo_action: Gonna §csync§r worlds
