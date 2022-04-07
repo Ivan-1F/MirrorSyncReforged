@@ -29,7 +29,6 @@ def command_run(message: Any, hover: Any, command: str) -> RTextBase:
 
 def show_help_message(source: CommandSource):
     source.reply(tr('help_message', name=metadata.name, version=metadata.version, prefix=PREFIX))
-    pass
 
 
 # From Quick Backup Multi
@@ -216,3 +215,4 @@ def on_load(server: PluginServerInterface, old):
     metadata = server.get_self_metadata()
     load_config()
     register_command(server)
+    server.register_help_message(PREFIX, tr("help_summary"))

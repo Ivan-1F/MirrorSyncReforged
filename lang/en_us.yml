@@ -1,12 +1,14 @@
 mirror_sync_reforged:
   help_message: |
     ------ {name} v{version} ------
-    A plugin used to sync survival server worlds to the mirror server
+    A plugin to sync survival server worlds to the mirror server
     §7{prefix}§r Display help message
     §7{prefix} sync§r Sync worlds
     §7{prefix} confirm§r Use after execute back to confirm §csync§r execution
     §7{prefix} abort§r Abort §csyncing§r at anytime
     §7{prefix} reload§r Reload config file
+
+  help_summary: Sync survival server worlds to the mirror server
 
   sync:
     echo_action: Gonna §csync§r worlds

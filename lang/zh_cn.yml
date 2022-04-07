@@ -8,6 +8,8 @@ mirror_sync_reforged:
     §7{prefix} abort§r 在任何时候键入此指令可中断§c同步§r
     §7{prefix} reload§r 重新加载配置文件
 
+  help_summary: 同步生存服存档至镜像服
+
   sync:
     echo_action: 准备§c同步§r存档
     confirm_hint: 使用§7{0} confirm§r 确认§c同步§r
