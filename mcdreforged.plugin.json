@@ -1,6 +1,6 @@
 {
     "id": "mirror_sync_reforged",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "name": "Mirror Sync Reforged",
     "description": {
         "en_us": "A plugin to sync survival server world to the mirror server",
