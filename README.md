@@ -55,6 +55,10 @@ If enabled, [QuickBackupM](https://github.com/TISUnion/QuickBackupM) is required
 
 A backup of the mirror server will be created by [QuickBackupM](https://github.com/TISUnion/QuickBackupM) before syncing the world
 
+### `ignore_session_lock`
+
+If enabled, `session.lock` file will be ignored when copying the world
+
 ### Example
 
 File structure:

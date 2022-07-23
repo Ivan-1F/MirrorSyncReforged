@@ -51,9 +51,13 @@ MirrorSyncReforged
 
 默认值：`false`
 
-如果启动，此插件将依赖 [QuickBackupM](https://github.com/TISUnion/QuickBackupM)
+如果启用，此插件将依赖 [QuickBackupM](https://github.com/TISUnion/QuickBackupM)
 
 在同步存档前将使用 [QuickBackupM](https://github.com/TISUnion/QuickBackupM) 进行备份
+
+### `ignore_session_lock`
+
+如果启用，拷贝世界时将忽略 `session.lock` 文件
 
 ### 例子
 

@@ -10,3 +10,4 @@ class Configure(Serializable):
     world_names: List[str] = ['world']
     count_down: int = 10
     backup: bool = False
+    ignore_session_lock: bool = True
